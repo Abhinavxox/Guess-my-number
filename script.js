@@ -42,6 +42,7 @@ document.querySelector(".check").addEventListener("click", function () {
       highscore = score;
     }
     displayHighscore(highscore);
+    document.querySelector(".check").addEventListener("click", a);
   }
   //if it is high or low
   else if (guess !== secretNumber) {
