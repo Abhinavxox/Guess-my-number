@@ -54,16 +54,12 @@ document.querySelector(".check").addEventListener("click", function () {
     displayMessage("You lost the game😢");
     document.querySelector("body").style.backgroundColor = "red";
     getCheck("Again!");
-    document.querySelector(".check").addEventListener("click", function () {
-      a();
-    });
+    document.querySelector(".check").addEventListener("click", a);
   }
 });
 
 //handler for again btn
-document.querySelector(".again").addEventListener("click", function () {
-  a();
-});
+document.querySelector(".again").addEventListener("click", a);
 
 //reset function
 function a() {
@@ -74,4 +70,6 @@ function a() {
   displayMessage("Start guessing...");
   getCheck("Check!");
   document.querySelector(".guess").value = "";
+  //
+  document.querySelector(".check").removeEventListener("click", a);
 }
